@@ -4,7 +4,8 @@ import csv
 import os
 
 # put your github tokens
-tokens = ['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', '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', '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', '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', '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']
+# tokens = ['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', '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', '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', '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', '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']
+tokens = ['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', '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']
 
 def select_token():
     value = random.randrange(1,10)

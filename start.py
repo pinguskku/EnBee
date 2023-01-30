@@ -11,8 +11,8 @@ from random_user_agent.params import SoftwareName, OperatingSystem
 import sys
 import copy
 import subprocess
-from modules.codecarbon.codecarbon import EmissionsTracker
-from modules.codecarbon.codecarbon import track_emissions
+from codecarbon import EmissionsTracker
+from codecarbon import track_emissions
 import argparse
 
 def change_pwd(path):
@@ -245,8 +245,6 @@ def filter_commits_exist_tc(project):
             files = body["files"]
 
             tc_file_paths = []
-
-
             already_insert = False
 
             # check tc file
@@ -690,6 +688,10 @@ def save_energy_bug_commits(final_result, project_name):
 
 
 
+# Follow steps
+# 1) original_projects
+# 2) report_results/buggy/
+# 3) report_results/tc_buggy/
 for obj in projects:
     target_project_infos = obj.split("/")
     project = target_project_infos[-2] + "/" + target_project_infos[-1].replace(".git", "")
@@ -763,8 +765,8 @@ for obj in projects:
     latest_package_manage_system_commits = ignore_old_package_manage_system_commits(project)
     save_latest_package_manage_system_commits(project, latest_package_manage_system_commits)
 
-    # 9.3 Estimate Energy Diff With Current and Parent Commits
-    # before / after
+    9.3 Estimate Energy Diff With Current and Parent Commits
+    before / after
     estimate_energy_diff_current_parent(project, latest_package_manage_system_commits)
 
     final_result = extract_energy_bug_commits(project_name)
