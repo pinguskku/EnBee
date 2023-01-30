@@ -640,10 +640,6 @@ def save_energy_bug_commits(final_result, project_name):
 
 
 
-# Follow steps
-# 1) original_projects
-# 2) report_results/buggy/
-# 3) report_results/tc_buggy/
 for obj in projects:
     target_project_infos = obj.split("/")
     project = target_project_infos[-2] + "/" + target_project_infos[-1].replace(".git", "")
