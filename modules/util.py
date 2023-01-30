@@ -4,7 +4,7 @@ import csv
 import os
 
 # TODO: input from argv
-tokens = ['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', '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', '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']
+tokens = ['your_token1', 'your_token2', 'your_token3']
 
 def select_token():
     value = random.randrange(1,10)
