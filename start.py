@@ -6,8 +6,6 @@ import subprocess
 import requests
 from bs4 import BeautifulSoup
 import time
-from random_user_agent.user_agent import UserAgent
-from random_user_agent.params import SoftwareName, OperatingSystem
 import sys
 import copy
 import subprocess
@@ -27,52 +25,6 @@ args = parser.parse_args()
 project_link_path = args.datas
 
 projects = util.read_from_csv(project_link_path)['link']
-
-# projects = [
-#     "ethereum/go-ethereum",
-#     "ava-labs/avalanchego",
-#     "etclabscore/core-geth",
-#     # "hyperledger/besu",
-#     "bobanetwork/boba",
-#     "maticnetwork/bor",
-#     "BitcoinAssetChain/BTA-CHAIN",
-#     "Bytom/bytom",
-#     "cube-network/Cube",
-#     "Dithereum/Dithereum-Core",
-#     "double-a-chain-cloud/double-a-chain",
-#     "FUSIONFoundation/efsn",
-#     "energicryptocurrency/energi",
-#     "ledgerwatch/erigon",
-#     "Ether1Project/Ether1",
-#     "evmos/evmos",
-#     "EZChain-core/ezcgo",
-#     "gochain/gochain",
-#     "ShyftNetwork/go-empyrean",
-#     "Evanesco-Labs/go-evanesco",
-#     "hpb-project/go-hpb",
-#     "good-data-foundation/goodata-chain",
-#     "TechPay-io/go-photon",
-#     "quadrans/go-quadrans",
-#     "QuarkChain/goquarkchain",
-#     "ThinkiumGroup/go-thinkium",
-#     "ubiq/go-ubiq",
-#     "wanchain/go-wanchain",
-#     "Dev-JamesR/go-xerom",
-#     "HaloNetwork/Halo_Source_Code",
-#     "iotexproject/iotex-core",
-#     "Kava-Labs/kava",
-#     "klaytn/klaytn",
-#     "ontio/ontology",
-#     "smartbch/smartbch",
-#     "gitter-badger/tao2",
-#     "teleport-network/teleport",
-#     "thetatoken/theta-protocol-ledger",
-#     "tomochain/tomochain",
-#     "hash-laboratories-au/XDPoSChain",
-#     "xt-smartchain/xsc-chain",
-#     "Zenith-Chain/Zenithchain",
-#     "ZYXnetwork/ZYX-20-v1"        
-# ]
 
 # set current absolute path
 absolute_path = os.getcwd()
@@ -765,8 +717,8 @@ for obj in projects:
     latest_package_manage_system_commits = ignore_old_package_manage_system_commits(project)
     save_latest_package_manage_system_commits(project, latest_package_manage_system_commits)
 
-    9.3 Estimate Energy Diff With Current and Parent Commits
-    before / after
+    # 9.3 Estimate Energy Diff With Current and Parent Commits
+    # before / after
     estimate_energy_diff_current_parent(project, latest_package_manage_system_commits)
 
     final_result = extract_energy_bug_commits(project_name)
