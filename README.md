@@ -16,18 +16,20 @@ The EnBee focus to identify energy bugs from Ethereum Client Software [(ECS)](ht
 #### ● docker pull golang:1.19
 ### 3-step (setup docker container)
 #### ● docker run -itd --volume="<your_enbee_path>:/go" --name enbee_1 golang:1.19
-### 4-step (setup container environment)
+### 4-stop (enter docker container)
+#### ● docker exec -it enbee_1 /bin/bash
+### 5-step (setup container environment)
 #### (In docker container)
 #### ● apt update
 #### ● apt install python3-pip -y
 #### ● pip3 install -r requirements.txt
-### 5-step (setup your GitHub API Tokens)
+### 6-step (setup your GitHub API Tokens)
 #### ● go to the modules/util.py
 <line 7>
 ```
 tokens = [your_token1, your_token2, your_token3, ...]
 ```
-### 6-step (execute EnBee)
+### 7-step (execute EnBee)
 #### python3 start.py --datas <your_ecs_projects_links.csv path>
 #### ex) python3 start.py --datas /go/example/project_link.csv
 ---
