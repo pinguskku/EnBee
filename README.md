@@ -9,7 +9,7 @@ The EnBee focus to identify energy bugs from Ethereum Client Software [(ECS)](ht
 ### No processes which not related current software
 ### [Intel RAPL](https://web.eece.maine.edu/~vweaver/projects/rapl/) support device
 ---
-## Detail Installation
+## Installation Guide
 ### 1-step (cloning project)
 #### ● git clone https://github.com/pinguskku/EnBee.git
 ### 2-step (setup docker image)
@@ -29,11 +29,8 @@ tokens = [your_token1, your_token2, your_token3, ...]
 ```
 ### 6-step (execute EnBee)
 #### python3 start.py --datas <your_ecs_projects_links.csv path>
+#### ex) python3 start.py --datas /go/example/project_link.csv
 ---
-If you want to execute demo? 
-
-Check
-Quick Start
 
 
 
