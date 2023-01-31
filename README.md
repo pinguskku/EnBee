@@ -1,6 +1,10 @@
 # EnBee
 EnBee: Energy Bug Extractor from Ethereum Client Software
 
+# Description
+You can run EnBee to traditional software (web, apps, etc.) using unit testing as well as Ethereum Client Software.
+Because each step is modularized, customization is easy.
+
 The EnBee focus to identify energy bugs from Ethereum Client Software [(ECS)](https://ethereum.org/en/developers/docs/nodes-and-clients/)
 ---
 ## Running Environment
