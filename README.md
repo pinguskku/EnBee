@@ -3,6 +3,17 @@
 # EnBee
 EnBee: Energy Bug Extractor from Ethereum Client Software
 
+# What is the Energy Bug?
+A source code that performs unnecessary calculations in software is defined as an energy bug.
+Unnecessary actions of software can be divided into two categories.
+First, abnormal behavior
+=> Indicates a bug in the software.
+Second, normal behavior
+=> This is not a bug, but indicates a case where unnecessary operations are performed.
+
+First of all, EnBee is the first tool to automatically identify energy bugs in ECS, identifying energy bugs among bugs that are abnormal behavior.
+
+
 # Description
 You can run EnBee to traditional software (web, apps, etc.) using unit testing as well as Ethereum Client Software.
 Because each step is modularized, customization is easy.
