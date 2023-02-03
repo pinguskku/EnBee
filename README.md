@@ -15,6 +15,7 @@ Second, normal behavior
 
 => This is not a bug, but indicates a case where unnecessary operations are performed.
 
+Currently, no methods to get bugs from normal behavior.
 First of all, EnBee is the first tool to automatically identify energy bugs in ECS, identifying energy bugs among bugs that are abnormal behavior.
 
 
